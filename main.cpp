@@ -1,13 +1,10 @@
-#include "arc_vector.hpp"
+#include "iso_trig.hpp"
+#include "iso_util.hpp"
 
 int main()
 {
-  arc::vec3<float> v1 = arc::vec3(1.0f, 1.0f, 1.0f);
-  std::cout << arc::dot_product(v1, arc::negate(v1)) << std::endl;
+  log(iso::_sin<float128>(0.0000001));
+  log(iso::_cos<float128>(iso::constant::pi));
 
-  std::cout << "test" << std::endl;
-
-  v1.logv();
-
-	exit(1);
+ 	exit(1);
 }

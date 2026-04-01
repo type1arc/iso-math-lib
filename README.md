@@ -30,16 +30,16 @@ Planned enhancements include:
 ## Installation
 To integrate Arc Math Lib into your C++ project, clone the repository:
 ```sh
-git clone https://github.com/type1arc/arc-math-lib.git
+git clone https://github.com/type1iso/iso-math-lib.git
 
 ```
 
 ## Author
-Developed by **[type1arc](https://github.com/type1arc)**
-[![GitHub Profile](https://img.shields.io/badge/GitHub-type1arc-blue?style=flat-square&logo=github)](https://github.com/type1arc)
+Developed by **[type1iso](https://github.com/type1iso)**
+[![GitHub Profile](https://img.shields.io/badge/GitHub-type1iso-blue?style=flat-square&logo=github)](https://github.com/type1iso)
 
 ## License
-Copyright 2025 type1arc
+Copyright 2025 type1iso
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

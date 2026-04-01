@@ -1,0 +1,28 @@
+#pragma once
+
+#include <tuple>
+#include "iso_concepts.hpp"
+
+#define iota sqrt(-1)
+
+  // complex numbers - lets see how it goes
+  // [UPDATE] turned out pretty good i think
+  //
+  // added '+' and '*' operators for complex values 
+namespace complex_plane
+{
+	template<numeric _type>
+	struct complex
+	{
+	public:
+	  std::tuple<_type, _type> value;
+	  _type re_comp, im_comp;
+		
+	  complex(_type re_comp, _type im_comp);
+    complex operator+(const complex& otr) const; 
+
+    complex operator*(const complex& otr) const; 
+	  _type iabs(std::tuple<_type, _type>& value);
+	  void log();
+	};
+}
