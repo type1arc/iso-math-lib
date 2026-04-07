@@ -11,7 +11,7 @@
   // added '+' and '*' operators for complex values 
 namespace complex_plane
 {
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	struct complex
 	{
 	public:

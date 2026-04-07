@@ -3,8 +3,8 @@
 
 int main()
 {
-  log(iso::_sin<float128>(0.0000001));
-  log(iso::_cos<float128>(iso::constant::pi));
+        log(iso::__sin<float128>(0.0000001));
+        log(iso::__cos<float128>(iso::constant::pi));
 
- 	exit(1);
+	exit(1);
 }

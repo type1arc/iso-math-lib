@@ -8,7 +8,7 @@ namespace vortex // TO DO: ADD MORE
 {
 	namespace opt
 	{
-		template<numeric _type>
+		template<iso::concepts::numeric _type>
 		struct shift
 		{
 		public:
@@ -20,7 +20,7 @@ namespace vortex // TO DO: ADD MORE
 			void log();
 		};
 
-		template<numeric _type>
+		template<iso::concepts::numeric _type>
 		struct expo // UPDATED...
 		{
 		public:

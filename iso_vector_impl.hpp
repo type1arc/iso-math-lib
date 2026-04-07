@@ -5,7 +5,7 @@
 
 namespace iso
 {
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec3<_type>::vec3(_type x, _type y, _type z)
 	{
 		this->x = x;
@@ -15,16 +15,16 @@ namespace iso
 		vec_t = std::make_tuple(this->x, this->y, this->z);
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	void vec3<_type>::logv() { std::cout << "(" << x << ", " << y << ", " << z << ")" << std::endl; }
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	_type vec3<_type>::mag() { return x + y + z; }
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	std::tuple<_type, _type, _type> vec3<_type>::get() { return vec_t; }
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec2<_type>::vec2(_type x, _type y)
 	{
 		this->x = x;
@@ -33,17 +33,17 @@ namespace iso
 		vec_t = std::make_tuple(this->x, this->y);
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	void vec2<_type>::logv() { std::cout << "(" << x << ", " << y << ")" << std::endl; }
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	_type vec2<_type>::mag() { return x + y; }
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	std::tuple<_type, _type> vec2<_type>::get() { return vec_t; }
 
-	/*template <numeric _type>
-	struct  mat3
+	/*template <iso::concepts::numeric _type>
+	struct	mat3
 	{
 	public:
 		std::vector<std::vector<_type>> mat;
@@ -70,7 +70,7 @@ namespace iso
 	};	*/
 
 	// vectors in 3D space
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec3<_type> Add(vec3<_type> v1, vec3<_type> v2)
 	{
 		vec3<_type> _out = vec3<_type>
@@ -83,7 +83,7 @@ namespace iso
 		return _out;
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec3<_type> normalize(vec3<_type> v)
 	{
 		vec3<_type> _out = vec3<_type>(
@@ -99,7 +99,7 @@ namespace iso
 		return _out;
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec3<_type> negate(vec3<_type> v)
 	{
 		v.x *= -1;
@@ -109,13 +109,13 @@ namespace iso
 		return v;
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	_type dot_product(vec3<_type> v1, vec3<_type> v2)
 	{
 		return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z; 
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec3<_type> cross_product(vec3<_type> v1, vec3<_type> v2)
 	{
     // a×b⃗=i^(a2b3−a3b2)−j^(a1b3−a3b1)+k^(a1b2−a2b1
@@ -123,7 +123,7 @@ namespace iso
 	}
 
 	// vectors in 2D space
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec2<_type> Add(vec2<_type> v1, vec2<_type> v2)
 	{
 		vec2<_type> _out = vec2<_type>
@@ -135,7 +135,7 @@ namespace iso
 		return _out;
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec2<_type> normalize(vec2<_type> v)
 	{
 		vec2<_type> _out = vec2<_type>(
@@ -149,7 +149,7 @@ namespace iso
 		return _out;
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec2<_type> negate(vec2<_type> v)
 	{
 		v.x *= -1;
@@ -158,13 +158,13 @@ namespace iso
 		return v;
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	 _type dot_product(vec2<_type> v1, vec2<_type> v2)
 	{
 		return v1.mag() * v2.mag() * cos(atan2(v1.mag(), v2.mag()));
 	}
 
-	template<numeric _type>
+	template<iso::concepts::numeric _type>
 	vec2<_type> cross_product(vec2<_type> v1, vec2<_type> v2)
 	{
 		vec2<_type> _out = vec2<_type>(0.0f, 0.0f);

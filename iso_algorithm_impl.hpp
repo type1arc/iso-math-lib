@@ -22,7 +22,7 @@ namespace algorithm
 
 		  for (size_t k = 0; k < N / 2; ++k) 
 		  {
-			Complex t = std::polar<float>(1.0, -2 * constants::pi * k / N) * odd[k];
+			Complex t = std::polar<float>(1.0, -2 * iso::constant::pi * k / N) * odd[k];
 			x[k] = even[k] + t;
 			x[k + N / 2] = even[k] - t;
 		  }
