@@ -1,8 +1,8 @@
-# Iso Math Lib (previously Arc Math Lib)
+# Fast Math Lib (previously Arc Math Lib)
 
 
 ## Overview
-Iso Math Lib is a **C++-based mathematical library**, meticulously built **from the ground up** to deliver **high-performance computations** and **structured numerical processing**. Inspired by **GLM's intuitive syntax**, it offers a seamless interface, making **vector operations, matrix manipulations, and complex number computations** feel natural while ensuring **precision and efficiency**.
+Fast Math Lib is a **C++-based mathematical library**, meticulously built **from the ground up** to deliver **high-performance computations** and **structured numerical processing**. Inspired by **GLM's intuitive syntax**, it offers a seamless interface, making **vector operations, matrix manipulations, and complex number computations** feel natural while ensuring **precision and efficiency**.
 
 Designed **without reliance on external libraries**, every component—from **core mathematical constructs** to **custom acceleration models**—has been carefully engineered to provide **full control over implementation and optimization**.
 

@@ -7,7 +7,7 @@ namespace iso
 {
 	
 	template<iso::concepts::numeric _type>
-	struct vec3 // For vectors in 3D space
+	struct Vec3 // For vectors in 3D space
 	{
 	private:
 		std::tuple<_type, _type, _type> vec_t;
@@ -15,15 +15,17 @@ namespace iso
 	public:
 		_type x, y, z;
 
-		vec3(_type x, _type y, _type z);
+		Vec3(_type x, _type y, _type z);
 
 		void logv();
 		_type mag();
 		std::tuple<_type, _type, _type> get(); 
+
+                constexpr Vec3<_type> operator+(const Vec3<_type>& v) const;
 	};
 
 	template<iso::concepts::numeric _type>
-	struct vec2 // For vectors in 2D space
+	struct Vec2 // For vectors in 2D space
 	{
 	private:
 		std::tuple<_type, _type> vec_t;
@@ -31,7 +33,7 @@ namespace iso
 	public:
 		_type x, y;
 
-		vec2(_type x, _type y);
+		Vec2(_type x, _type y);
 
 		void logv();
 		_type mag();
@@ -65,38 +67,41 @@ namespace iso
 		}
 	};	*/
 
-	// vectors in 3D space
+	// for vectors in 3D space
 	template<iso::concepts::numeric _type>
-	vec3<_type> Add(vec3<_type> v1, vec3<_type> v2);
+	Vec3<_type> add(Vec3<_type> v1, Vec3<_type> v2);
+
+         
+
 
 	template<iso::concepts::numeric _type>
-	vec3<_type> normalize(vec3<_type> v);
+	Vec3<_type> normalize(Vec3<_type> v);
 	
 	template<iso::concepts::numeric _type>
-	vec3<_type> negate(vec3<_type> v);
+	Vec3<_type> negate(Vec3<_type> v);
 	
 	template<iso::concepts::numeric _type>
-	_type dot_product(vec3<_type> v1, vec3<_type> v2);
+	_type dot_product(Vec3<_type> v1, Vec3<_type> v2);
 	
 	template<iso::concepts::numeric _type>
-	vec3<_type> cross_product(vec3<_type> v1, vec3<_type> v2);
+	Vec3<_type> cross_product(Vec3<_type> v1, Vec3<_type> v2);
 
-	// vectors in 2D space
+	// for vectors in 2D space
 	template<iso::concepts::numeric _type>
-	vec2<_type> Add(vec2<_type> v1, vec2<_type> v2);
-
-	template<iso::concepts::numeric _type>
-	vec2<_type> normalize(vec2<_type> v);
-	
-	template<iso::concepts::numeric _type>
-	vec2<_type> negate(vec2<_type> v);
-	
+	Vec2<_type> Add(Vec2<_type> v1, Vec2<_type> v2);
 
 	template<iso::concepts::numeric _type>
-	_type dot_product(vec2<_type> v1, vec2<_type> v2);
+	Vec2<_type> normalize(Vec2<_type> v);
 	
 	template<iso::concepts::numeric _type>
-	vec2<_type> cross_product(vec2<_type> v1, vec2<_type> v2);
+	Vec2<_type> negate(Vec2<_type> v);
+	
+
+	template<iso::concepts::numeric _type>
+	_type dot_product(Vec2<_type> v1, Vec2<_type> v2);
+	
+	template<iso::concepts::numeric _type>
+	Vec2<_type> cross_product(Vec2<_type> v1, Vec2<_type> v2);
 }
 
 #include "iso_vector_impl.hpp"

@@ -7,28 +7,28 @@ namespace vortex
 	namespace opt
 	{
 		template<iso::concepts::numeric _type>
-		shift<_type>::shift(_type x, _type y, _type z) : x(x), y(y), z(z) {}
+		Shift<_type>::Shift(_type x, _type y, _type z) : x(x), y(y), z(z) {}
 
 		template<iso::concepts::numeric _type>
-		shift<_type> shift<_type>::operator>>(const shift<_type>& _this)
+		Shift<_type> Shift<_type>::operator>>(const Shift<_type>& _this)
 		{
-			return shift(x = _this.y, y = _this.z, z = _this.x);
+			return Shift(x = _this.y, y = _this.z, z = _this.x);
 		}
 		
 		template<iso::concepts::numeric _type>
-		void shift<_type>::log()
+		void Shift<_type>::log()
 		{
 			std::cout << "(" << x << ", " << y << ", " << ")";
 		}
 		
-		// exponentiation
+		// Exponentiation
 		template<iso::concepts::numeric _type>
-		expo<_type>::expo(_type x) : x(x) {}
+		Expo<_type>::Expo(_type x) : x(x) {}
 
 		template<iso::concepts::numeric _type>
-		_type expo<_type>::operator^(_type exponent)
+		_type Expo<_type>::operator^(_type Exponent)
 		{
-			return std::pow(x, exponent);
+			return std::pow(x, Exponent);
 		}
 	}
 }

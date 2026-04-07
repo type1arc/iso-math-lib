@@ -6,30 +6,30 @@
 namespace complex_plane
 {
 	template<iso::concepts::numeric _type>
-	complex<_type>::complex(_type re_comp, _type im_comp) : re_comp(re_comp), 
+	Complex<_type>::Complex(_type re_comp, _type im_comp) : re_comp(re_comp), 
 													 im_comp(im_comp), 
 													 value(std::make_tuple(re_comp, im_comp))
 	{}
 
 	template<iso::concepts::numeric _type>
-	_type complex<_type>::iabs(std::tuple<_type, _type>& value)
+	_type Complex<_type>::iabs(std::tuple<_type, _type>& value)
 	{
 		return sqroot(re_comp * re_comp + im_comp * im_comp);
   }
   template<iso::concepts::numeric _type>
-  complex<_type> complex<_type>::operator+(const complex& otr) const 
+  Complex<_type> Complex<_type>::operator+(const Complex& otr) const 
   {
-    return complex(re_comp * otr.re_comp, im_comp + otr.im_comp);
+    return Complex(re_comp * otr.re_comp, im_comp + otr.im_comp);
   }
 
   template<iso::concepts::numeric _type>
-  complex<_type> complex<_type>::operator*(const complex& otr) const 
+  Complex<_type> Complex<_type>::operator*(const Complex& otr) const 
   {
-    return complex(re_comp * otr.re_comp - im_comp * otr.im_comp, 
+    return Complex(re_comp * otr.re_comp - im_comp * otr.im_comp, 
 		   re_comp * otr.im_comp + im_comp * otr.re_comp);
   }
 	template<iso::concepts::numeric _type>
-	void complex<_type>::log()
+	void Complex<_type>::log()
       {
 	std::string sign;
 

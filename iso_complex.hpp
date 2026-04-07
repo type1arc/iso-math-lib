@@ -5,23 +5,23 @@
 
 #define iota sqrt(-1)
 
-  // complex numbers - lets see how it goes
+  // Complex numbers - lets see how it goes
   // [UPDATE] turned out pretty good i think
   //
-  // added '+' and '*' operators for complex values 
+  // added '+' and '*' operators for Complex values 
 namespace complex_plane
 {
 	template<iso::concepts::numeric _type>
-	struct complex
+	struct Complex
 	{
 	public:
 	  std::tuple<_type, _type> value;
 	  _type re_comp, im_comp;
 		
-	  complex(_type re_comp, _type im_comp);
-    complex operator+(const complex& otr) const; 
+	  Complex(_type re_comp, _type im_comp);
+    Complex operator+(const Complex& otr) const; 
 
-    complex operator*(const complex& otr) const; 
+    Complex operator*(const Complex& otr) const; 
 	  _type iabs(std::tuple<_type, _type>& value);
 	  void log();
 	};

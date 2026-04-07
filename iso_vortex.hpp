@@ -9,25 +9,25 @@ namespace vortex // TO DO: ADD MORE
 	namespace opt
 	{
 		template<iso::concepts::numeric _type>
-		struct shift
+		struct Shift
 		{
 		public:
 			_type x, y, z;
-			shift(_type x, _type y, _type z);
+			Shift(_type x, _type y, _type z);
 
-			shift operator>>(const shift& _this);
+			Shift operator>>(const Shift& _this);
 
 			void log();
 		};
 
 		template<iso::concepts::numeric _type>
-		struct expo // UPDATED...
+		struct Expo // UPDATED...
 		{
 		public:
 			_type x;
-			expo(_type x);
+			Expo(_type x);
 
-			_type operator^(_type exponent);
+			_type operator^(_type Exponent);
 		};
 	}
 }
