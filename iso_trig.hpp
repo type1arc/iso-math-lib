@@ -44,12 +44,12 @@ namespace iso
       template <iso::concepts::numeric _type>
       _type __cos(_type x)
       {
-                constexpr double c2 =  4.16666666666666666647e-02;
-                constexpr double c4 = -1.38888888888887588854e-03;
-                constexpr double c6 =  2.48015872888505653021e-05;
-                constexpr double c8 = -2.75573192192997980483e-07;
-                constexpr double c10 = 2.08767557072843831027e-09;
-                constexpr double c12 = -1.14729751058583257904e-11;
+                constexpr double c2  = -5.00000000000000000000e-01;
+                constexpr double c4  =  4.16666666666666666647e-02;
+                constexpr double c6  = -1.38888888888887588854e-03;
+                constexpr double c8  =  2.48015872888505653021e-05;
+                constexpr double c10 = -2.75573192192997980483e-07;
+                constexpr double c12 =  2.08767557072843831027e-09;
 
                 if (std::isnan(x)) return NAN;
                 if (std::isinf(x)) return NAN;
@@ -66,8 +66,14 @@ namespace iso
 
                 float128 z  = reduced * reduced;
                 float128 r  = c4 + z * (c6 + z * (c8 + z * (c10 + z * c12)));
-                float128 approx = 1.0f + z * (c2 + z * r);
+                float128 approx = 1.0L + z * (c2 + z * r);
 
                 return ((quad_val & 1) == 0) ? approx : -approx;
+      }
+
+      template <iso::concepts::numeric _type>
+      _type __tan(_type x)
+      {
+              return __sin(x) / __cos(x);
       }
 }
