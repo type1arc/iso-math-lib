@@ -1,10 +1,11 @@
 #include "iso_trig.hpp"
-#include "iso_util.hpp"
 #include "iso_linear_alg.hpp"
+#include "iso_linear_alg_impl.hpp"
+#include "iso_types.hpp"
 
 int main()
 {
-        log(iso::__sin<float128>(0.0000001));
+        log(iso::__sin<float32>(0.0000001));
         log(iso::__cos<float128>(iso::constant::pi));
         log(iso::__tan<float128>(iso::constant::pi / 4));
 
@@ -12,7 +13,7 @@ int main()
         iso::Vec3<int> v2 = iso::Vec3<int>(-1, 4, -9);
 
         iso::Vec3<int> sum = v1 + v2;
-        sum.logv();
+        sum.logtty();
 
 	exit(1);
 }

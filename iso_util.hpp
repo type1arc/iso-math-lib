@@ -29,10 +29,10 @@ namespace iso
                 }
 
               template<iso::concepts::numeric _type>
-              _type sqroot(_type _x)                                    // SQR ROOT FUNCTION using Newton-Raphson Method
+              _type root2(_type _x)                                    // SQR ROOT FUNCTION using Newton-Raphson Method
               {
                         if (_x < 0.0f) {
-                          errlog("complex-plane: arg < 0");
+                          errlog("complex-plane: sqroot arg < 0");
                           return EXIT_FAILURE;
                         }
 

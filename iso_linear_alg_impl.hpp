@@ -4,6 +4,7 @@
 #include <iostream>
 #include "iso_concepts.hpp"
 #include "iso_linear_alg.hpp"
+#include "iso_trig.hpp"
 
 namespace iso
 {
@@ -23,7 +24,7 @@ namespace iso
         }
 
 	template<iso::concepts::numeric _type>
-	void Vec3<_type>::logv() { std::cout << "(" << x << ", " << y << ", " << z << ")" << std::endl; }
+	void Vec3<_type>::logtty() { std::cout << "(" << x << ", " << y << ", " << z << ")" << std::endl; }
 
 	template<iso::concepts::numeric _type>
 	_type Vec3<_type>::mag() { return x + y + z; }
@@ -37,7 +38,7 @@ namespace iso
 	}
 
 	template<iso::concepts::numeric _type>
-	void Vec2<_type>::logv() { std::cout << "(" << x << ", " << y << ")" << std::endl; }
+	void Vec2<_type>::logtty() { std::cout << "(" << x << ", " << y << ")" << std::endl; }
 
 	template<iso::concepts::numeric _type>
 	_type Vec2<_type>::mag() { return x + y; }
@@ -46,7 +47,7 @@ namespace iso
 	template<iso::concepts::numeric _type>
         Mat4<_type> Mat4<_type>::perspective(float32 fov, float32 aspect, float32 near, float32 far)
         {
-                float32 f = 1.0f / tanf(fov * 0.5f);
+                float32 f = 1.0f / iso::__tan(fov * 0.5f);
                 Mat4 m = {0};
                 m.matrix[0][0] = f / aspect;
                 m.matrix[1][1] = f;
@@ -105,8 +106,8 @@ namespace iso
 	template<iso::concepts::numeric _type>
 	Vec3<_type> cross_product(Vec3<_type>& v1, Vec3<_type>& v2)
 	{
-    // a×b⃗=i^(a2b3−a3b2)−j^(a1b3−a3b1)+k^(a1b2−a2b1
-    return Vec3<_type>(v1.y * v2.z - v1.z * v2.y, v1.x * v2.z - v1.z - v2.x, v1.x * v2.y - v1.y * v2.x);
+            // a×b⃗=i^(a2b3−a3b2)−j^(a1b3−a3b1)+k^(a1b2−a2b1)
+            return Vec3<_type>(v1.y * v2.z - v1.z * v2.y, v1.x * v2.z - v1.z - v2.x, v1.x * v2.y - v1.y * v2.x);
 	}
 
 	// vectors in 2D space

@@ -1,3 +1,6 @@
+#ifndef ISO_CONSTANTS_HPP
+#define ISO_CONSTANTS_HPP
+
 #include "iso_types.hpp"
 
 namespace iso
@@ -9,3 +12,5 @@ namespace iso
     inline constexpr float128 half_pi  = 1.57079632679489661923;
   }
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef ISO_TRIG_HPP
+#define ISO_TRIG_HPP
+
 #include "iso_constants.hpp"
 #include "iso_concepts.hpp"
 #include "iso_util.hpp"
@@ -34,9 +37,9 @@ namespace iso
                 switch(quad_val & 3)					  // using bitwise AND instead of modulo to reduce the quadrant number into 1, 2, 3, 4	
                 {
                           case 0: return approx;				  // first  quadrant  :	 sin x
-                          case 1: return util::sqroot (1 - approx * approx);	  // second quadrant  :	 cos x
+                          case 1: return util::root2(1 - approx * approx);	  // second quadrant  :	 cos x
                           case 2: return - approx;				  // third  quadrant  : -sin x
-                          case 3: return -util::sqroot(1 - approx * approx);	  // fourth quadrant  : -cos x
+                          case 3: return -util::root2(1 - approx * approx);	  // fourth quadrant  : -cos x
                 }
                 return approx;
       }
@@ -70,10 +73,11 @@ namespace iso
 
                 return ((quad_val & 1) == 0) ? approx : -approx;
       }
-
       template <iso::concepts::numeric _type>
       _type __tan(_type x)
       {
               return __sin(x) / __cos(x);
       }
 }
+
+#endif

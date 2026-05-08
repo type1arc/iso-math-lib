@@ -1,4 +1,6 @@
-#pragma once
+#ifndef ISO_CONCEPTS_HPP
+#define ISO_CONCEPTS_HPP
+
 #include <concepts>
 #include <type_traits>
 
@@ -12,3 +14,4 @@ namespace iso
         }
 }
 
+#endif

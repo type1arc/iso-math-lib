@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ISO_LINEAR_ALG_HPP
+#define ISO_LINEAR_ALG_HPP
 
 #include "iso_concepts.hpp"
 #include "iso_types.hpp"
@@ -16,7 +17,7 @@ namespace iso
 
 		Vec3(_type x, _type y, _type z);
 
-		void logv();
+		void logtty();
 		_type mag();
 
             constexpr Vec3<_type> operator+(const Vec3<_type>& v) const;
@@ -32,7 +33,7 @@ namespace iso
 
 		Vec2(_type x, _type y);
 
-		void logv();
+		void logtty();
 		_type mag();
 	};
 
@@ -82,4 +83,4 @@ namespace iso
 	Vec2<_type> cross_product(Vec2<_type>& v1, Vec2<_type>& v2);
 }
 
-#include "iso_linear_alg_impl.hpp"
+#endif // !ISO_LINEAR_ALG_HPP
