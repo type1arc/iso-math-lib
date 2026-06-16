@@ -1,10 +1,10 @@
-# Fast Math Lib (previously Arc Math Lib)
+# ISO Math Lib (previously Arc Math Lib)
 
 
 ## Overview
-Fast Math Lib is a **C++-based mathematical library**, meticulously built **from the ground up** to deliver **high-performance computations** and **structured numerical processing**. Inspired by **GLM's intuitive syntax**, it offers a seamless interface, making **vector operations, matrix manipulations, and complex number computations** feel natural while ensuring **precision and efficiency**.
+ISO Math Lib is a **C++-based mathematical library**, meticulously built **from the ground up** to deliver **high-performance computations** and **structured numerical processing**. Inspired by **[...]
 
-Designed **without reliance on external libraries**, every component—from **core mathematical constructs** to **custom acceleration models**—has been carefully engineered to provide **full control over implementation and optimization**.
+Designed **without reliance on external libraries**, every component—from **core mathematical constructs** to **custom acceleration models**—has been carefully engineered to provide **full cont[...]
 
 ## Features
 - **Developed entirely from scratch** – No dependencies, ensuring **maximum flexibility and control**.
@@ -17,7 +17,7 @@ Designed **without reliance on external libraries**, every component—from **co
 - **Optimized Computation** – Engineered for **efficiency, precision, and flexibility** in **scientific and technical applications**.
 
 ## Purpose
-Arc Math Lib embraces **first-principles engineering**, blending **modern syntax design** with **raw computational power**. With an emphasis on **performance optimization**, it serves as a powerful tool for **scientific modeling, simulation, algorithm development, and structured mathematical computations**.
+Arc Math Lib embraces **first-principles engineering**, blending **modern syntax design** with **raw computational power**. With an emphasis on **performance optimization**, it serves as a powerfu[...]
 
 ## Future Roadmap
 Planned enhancements include:
@@ -28,7 +28,7 @@ Planned enhancements include:
 - **Further refine the existing features**
 
 ## Installation
-To integrate Arc Math Lib into your C++ project, clone the repository:
+To integrate ISO Math Lib into your C++ project, clone the repository:
 ```sh
 git clone https://github.com/type1iso/iso-math-lib.git
 
@@ -52,6 +52,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-
 
